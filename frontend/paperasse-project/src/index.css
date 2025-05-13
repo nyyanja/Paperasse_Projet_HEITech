@@ -1,0 +1,107 @@
+/* index.css – Global styles pour ton projet React */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff; /* Blanc - couleur de fond par défaut */
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Couleurs inspirées du drapeau malgache */
+:root {
+  --red: #e53935;
+  --green: #43a047;
+  --white: #ffffff;
+  --gray-light: #f2f2f2;
+}
+
+/* Typo & liens */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+/* Boutons */
+button {
+  padding: 0.6em 1.2em;
+  border: none;
+  border-radius: 8px;
+  background: var(--green);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--red);
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Formulaires */
+input, select, textarea {
+  width: 100%;
+  padding: 0.8em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 1em;
+  font-size: 1em;
+}
+
+form {
+  background: var(--gray-light);
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  background-color: var(--green);
+  color: white;
+  padding: 1em 0;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  button {
+    width: 100%;
+  }
+}
