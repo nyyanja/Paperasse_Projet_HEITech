@@ -1,0 +1,298 @@
+/* UsersList.css - Style moderne */
+.users-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.users-card {
+  width: 100%;
+  max-width: 1000px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.users-header {
+  background: linear-gradient(135deg, #009639 0%, #007e3a 100%);
+  padding: 1.5rem 2rem;
+  color: white;
+  position: relative;
+}
+
+.users-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 100%);
+  pointer-events: none;
+}
+
+.users-header h2 {
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.users-header p {
+  font-size: 1rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.search-container {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.search-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #009639;
+  box-shadow: 0 0 0 2px rgba(0, 150, 57, 0.1);
+  outline: none;
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(220, 38, 38, 0.1);
+  color: #dc2626;
+  padding: 1rem 2rem;
+  border-left: 4px solid #dc2626;
+  margin: 1rem 2rem;
+  border-radius: 4px;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  color: #666;
+}
+
+.spinner {
+  animation: spin 1.5s linear infinite;
+  color: #009639;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.table-container {
+  padding: 0 1rem;
+  overflow-x: auto;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1rem 0;
+}
+
+.users-table th {
+  text-align: left;
+  padding: 1rem;
+  color: #333;
+  font-weight: 600;
+  border-bottom: 2px solid #eee;
+}
+
+.users-table th.sortable {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.users-table th.sortable:hover {
+  color: #009639;
+}
+
+.users-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  color: #444;
+}
+
+.users-table tr:last-child td {
+  border-bottom: none;
+}
+
+.users-table tr:hover {
+  background-color: rgba(0, 150, 57, 0.05);
+}
+
+.user-name-cell,
+.user-email-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-icon {
+  color: #666;
+}
+
+.email-icon {
+  color: #888;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn.edit {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
+
+.action-btn.edit:hover {
+  background-color: rgba(59, 130, 246, 0.2);
+}
+
+.action-btn.delete {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.action-btn.delete:hover {
+  background-color: rgba(239, 68, 68, 0.2);
+}
+
+.no-results {
+  text-align: center;
+  padding: 2rem !important;
+  color: #666;
+  font-style: italic;
+}
+
+.users-stats {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+}
+
+.stats-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.stats-value {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #009639;
+}
+
+.stats-label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .users-container {
+    padding: 1rem;
+  }
+
+  .users-header {
+    padding: 1.2rem 1.5rem;
+  }
+
+  .users-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .search-container {
+    padding: 1rem 1.5rem;
+  }
+
+  .users-table th,
+  .users-table td {
+    padding: 0.8rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .action-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .users-stats {
+    padding: 1rem 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .users-table {
+    table-layout: fixed;
+  }
+
+  .users-table th,
+  .users-table td {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .user-name-cell,
+  .user-email-cell {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+  }
+}

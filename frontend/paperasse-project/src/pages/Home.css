@@ -1,13 +1,21 @@
-/* src/pages/Home.css */
+/* File: src/pages/Home.css */
+
+:root {
+  --green: #007e3a;
+  --red: #d22630;
+  --dark-red: #c21c27;
+  --gray-bg: #f4f4f9;
+}
+
 .home-container {
-  background-color: #f4f4f9;
+  background-color: var(--gray-bg);
   font-family: 'Segoe UI', sans-serif;
   text-align: center;
   padding: 2rem;
 }
 
 .hero-section {
-  background-color: #007e3a; /* Vert du drapeau de Madagascar */
+  background-color: var(--green);
   padding: 3rem 2rem;
   border-radius: 15px;
   color: white;
@@ -24,80 +32,138 @@
   margin-top: 1rem;
 }
 
-.info-section {
+.testimonial-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.indicator.active {
+  background-color: var(--green);
+}
+
+.stats-section {
+  margin: 3rem 0;
+}
+
+.stats-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin: 2rem 0;
+  margin-top: 2rem;
 }
 
-.info-card {
-  background-color: white;
+.stat-item {
+  background: white;
+  border-radius: 10px;
   padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 30%;
-  margin-bottom: 2rem;
-  text-align: center;
+  width: 200px;
+  margin: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.info-card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 1rem;
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--green);
 }
 
-.info-card h2 {
-  font-size: 1.5rem;
+.stat-label {
+  margin-top: 0.5rem;
   color: #333;
 }
 
-.info-card p {
-  color: #777;
+.cta-section {
+  background: white;
+  padding: 3rem 1rem;
+  border-radius: 10px;
+  margin-top: 3rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.cta-section {
-  margin-top: 3rem;
+.cta-content h2 {
+  font-size: 2rem;
+  color: #222;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  margin: 1rem 0;
 }
 
 .cta-button {
-  background-color: #d22630; /* Rouge du drapeau de Madagascar */
+  background-color: var(--red);
   color: white;
   padding: 1rem 2rem;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+  transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #c21c27;
+  background-color: var(--dark-red);
 }
 
 .contact-section {
   background-color: #f7f9fb;
   padding: 60px 20px;
   text-align: center;
+  margin-top: 3rem;
 }
 
-.contact-section h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-info {
+  max-width: 600px;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.contact-detail h4 {
+  margin: 0;
+  font-size: 1.1rem;
   color: #333;
+}
+
+.contact-detail p {
+  margin: 0.2rem 0 0;
+  color: #555;
 }
 
 .contact-form {
   max-width: 600px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1rem;
 }
 
-.contact-form input,
-.contact-form textarea {
-  padding: 15px;
+.form-control {
+  padding: 1rem;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -105,23 +171,19 @@
   transition: border-color 0.3s;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #006747;
+.form-control:focus {
+  border-color: var(--green);
   outline: none;
 }
 
-.contact-form button {
-  padding: 15px;
-  background-color: #006747;
+.footer {
+  background: #222;
   color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  padding: 2rem;
+  margin-top: 3rem;
 }
 
-.contact-form button:hover {
-  background-color: #004e39;
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
 }
