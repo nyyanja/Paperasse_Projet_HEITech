@@ -38,10 +38,8 @@ const Navbar = () => {
       <ul className={menuOpen ? 'open' : ''}>
         <li><Link to="/" className={isActive('/')}>Accueil</Link></li>
         <li><Link to="/formulaires" className={isActive('/formulaires')}>Formulaires</Link></li>
-        <li><Link to="/services" className={isActive('/services')}>Services</Link></li>
         <li><Link to="/register" className={isActive('/register')}>S'inscrire</Link></li>
         <li><Link to="/login" className={isActive('/login')}>Se connecter</Link></li>
-        <li><Link to="/users" className={isActive('/users')}>Utilisateurs</Link></li>
       </ul>
     </nav>
   );

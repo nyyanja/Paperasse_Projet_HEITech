@@ -105,11 +105,11 @@ export default function Home() {
             </motion.div>
             <motion.div className="contact-detail" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ delay: 0.2 }}>
               <FiPhone size={20} color="#007e3a" />
-              <div><h4>Téléphone</h4><p>+261 34 12 345 67</p></div>
+              <div><h4>Téléphone</h4><p>+261 38 496 09</p></div>
             </motion.div>
             <motion.div className="contact-detail" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ delay: 0.3 }}>
               <FiMapPin size={20} color="#007e3a" />
-              <div><h4>Adresse</h4><p>67 Rue Patrice Lumumba, Antananarivo 101, Madagascar</p></div>
+              <div><h4>Adresse</h4><p>Antananarivo, Madagascar</p></div>
             </motion.div>
           </div>
           <form className="contact-form" onSubmit={handleSubmit}>
